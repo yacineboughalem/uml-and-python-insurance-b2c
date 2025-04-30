@@ -1,0 +1,29 @@
+
+@startuml
+actor Client
+participant UI
+participant InsurancePlanFactory
+participant PricingStrategy
+participant Quote
+participant SubscriptionService
+participant Subscription
+participant Admin
+participant Broker
+participant Notifier
+
+Client -> UI : choisir plan
+UI -> InsurancePlanFactory : create("premium")
+UI -> PricingStrategy : calculer(prix)
+UI -> Quote : new()
+UI -> SubscriptionService : creer_souscription()
+SubscriptionService -> Subscription : init
+SubscriptionService -> Subscription : payer()
+SubscriptionService -> Notifier : envoyer()
+
+UI -> Admin : valider souscription
+Admin -> Subscription : statut = validée
+
+UI -> Broker : affecter_client()
+UI -> Broker : suivre(souscription)
+
+@enduml

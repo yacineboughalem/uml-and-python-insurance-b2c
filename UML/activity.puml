@@ -1,0 +1,12 @@
+
+@startuml
+start
+:Client choisit un plan;
+:Client génère un devis;
+:Client crée une souscription;
+:Client effectue le paiement;
+:Admin valide la souscription;
+:Notification envoyée;
+:Broker suit le client;
+stop
+@enduml

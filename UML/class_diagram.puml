@@ -1,0 +1,55 @@
+
+@startuml
+
+class Client {
+  - id
+  - nom
+  - email
+}
+
+class Admin {
+  - id
+  - nom
+  + valider_souscription()
+  + ajouter_plan()
+}
+
+class Broker {
+  - id
+  - nom
+  - projets
+  + suivre()
+}
+
+class InsurancePlan {
+  - id
+  - titre
+  - prix
+}
+
+class Quote {
+  - client
+  - plan
+  - estimation
+  + afficher()
+}
+
+class Subscription {
+  - client
+  - plan
+  - montant
+  - statut
+  + payer()
+}
+
+Client --> Quote
+Quote --> InsurancePlan
+Quote --> Client
+Subscription --> InsurancePlan
+Subscription --> Client
+
+Broker --> Subscription : suit
+Admin --> InsurancePlan : ajoute
+Admin --> Subscription : valide
+
+@enduml

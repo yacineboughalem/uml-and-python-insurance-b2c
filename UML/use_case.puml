@@ -1,0 +1,20 @@
+
+@startuml
+left to right direction
+
+actor Client
+actor Admin
+actor Broker
+
+Client --> (Consulter plans)
+Client --> (Générer devis)
+Client --> (Souscrire à un plan)
+Client --> (Payer la souscription)
+
+Admin --> (Valider souscription)
+Admin --> (Ajouter plan d'assurance)
+
+Broker --> (Affecter client)
+Broker --> (Suivre souscription client)
+
+@enduml
