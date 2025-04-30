@@ -1,6 +1,6 @@
 # > YACINE BOU-GHALEM <
 
-# Projet B2C Selfcare Assurance
+# Projet B2C
 
 Ce projet simule un système de souscription en ligne pour une assurance B2C, avec gestion des plans, devis, souscriptions, utilisateurs, et courtiers.
 
@@ -38,5 +38,4 @@ Ce projet simule un système de souscription en ligne pour une assurance B2C, av
 - `Activity Diagram` : parcours etape par étape du client
 - `Sequence Diagram` : detail de l’interaction entre objets
 
-> Merci Monsieur.
 
